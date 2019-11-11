@@ -16,6 +16,7 @@
 	<input type="password" name="pass" placeholder="Password...">
 	<input type="submit" name="login" value="Log In">
   </form>
+  <hr><a href="http://localhost">PUBLIC PAGE</a>
   <?php
     if(isset($_POST['user'])&&isset($_POST['pass'])){
         if ($_POST['user']=='admin' && $_POST['pass']=='admin123') {
@@ -31,6 +32,7 @@
     } else {
         echo "<div style=\"margin :0 auto; width: 600px;\">";
         echo "Selamat Datang ".$_SESSION['user']."!<br>";
+        echo "<hr><br><a href='profil.php'>PROFIL</a> | ";
         echo "<a href='logout.php'>LOGOUT</a>";
         echo "</div>";
     }
